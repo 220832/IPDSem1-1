@@ -24,23 +24,17 @@ def move(my_history, their_history, my_score, their_score):
     else:
         return 'c'
     if len(my_history)%12:
-
-        if 'b' not in their_history[-5]:
+        if 'b' not in (their_history):
             return 'c'
-    if len(my_history)%8:
-
-        return 'b'
-    else:
-        return 'c'
     if 'b' not in their_history[-3]:
         return 'c'
     if len(my_history)==1:
         if their_score>my_score:
-            return 'c'
+            return 'b'
 
         else:
-            return 'b'
-    if 'b' not in their_history[-5:]:
+            return 'c'
+    if 'b' in their_history[-5:]:
         return 'b'
     else:
         return 'c'
